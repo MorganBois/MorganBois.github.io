@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr-CA">
   <head>
-    <title>VANILLA JAVASCRIPT HANGMAN GAME</title>
-    <meta charset="UTF-8" />
-    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <title>JEU DU PENDU JAVASCRIPT VANILLE</title>
+    <meta charset="UTF-8">
+    <link href="src/styles.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
     <div class="wrapper">
-      <h1>Hangman</h1>
-      <h2>Vanilla Javascript Hangman Game</h2>
+      <h1>Jeu du pendu</h1>
+      <h2>Jeu du pendu Javascript Vanille</h2>
       <p>
-        Use the alphabet below to guess the word, or click hint to get a clue.
+        Utilisez l'alphabet ci-dessous pour deviner le mot, ou cliquez sur indice pour obtenir un indice.
       </p>
     </div>
 
@@ -20,16 +20,61 @@
       <p id="categoryName"></p>
       <div id="hold"></div>
       <p id="mylives"></p>
-      <p id="clue">Clue -</p>
+      <p id="clue">Indice -</p>
       <canvas id="stickman"
-        >This Text will show if the Browser does NOT support HTML5 Canvas
+        >Ce texte s'affichera si le navigateur ne prend PAS en charge HTML5 Canvas
         tag</canvas
       >
       <div class="container">
-        <button class="btn-2" id="hint">Hint</button>
-        <button class="btn-2" id="reset">Play again</button>
+        <button class="btn-2" id="hint">Indice</button>
+        <button class="btn-2" id="reset">Rejouer</button>
       </div>
+
+
+
+      <button class="btn-1" onclick="menuTriche()">Triche</button>
+      <div id="menu-triche" class="invisible">
+
+        <p>Ajouter un mot</p>
+        <div>
+          <label for="ajout-categorie">Catégorie :</label>
+          <select id="ajout-categorie"></select>
+          <label for="ajout-mot">Mot à ajouter :</label>
+          <input type="text" id="ajout-mot" placeholder="Entrez le mot à ajouter">
+          <label for="ajout-indice">Indice :</label>
+          <textarea id="ajout-indice" rows="3" placeholder="Entrez l'indice"></textarea>
+        </div>
+        <button class="btn-1" onclick="ajouterMot();">Ajouter le mot</button>
+
+        <p>Supprimer un mot</p>
+        <div>
+          <label for="supprimer-categorie">Catégorie :</label>
+          <select id="supprimer-categorie"></select>
+          <label for="supprimer-mot">Mot :</label>
+          <select id="supprimer-mot"></select>
+          <label for="supprimer-indice">Indice :</label>
+          <textarea id="supprimer-indice" rows="3" readonly></textarea>
+        </div>
+        <button class="btn-1" onclick="supprimerMot();">Supprimer le mot</button>
+
+      </div>
+
+
     </div>
+    <footer>
+      <div>
+        <p>Inspiration du projet :</p>
+        <a href="https://codesandbox.io/s/z9fhk">https://codesandbox.io/s/z9fhk</a>
+      </div>
+      <div>
+        <p>Morgan Boissonneault</p>
+        <p>Design Web A2023</p>
+      </div>
+      <a href="mailto:2353421@carrefour.cegepvicto.ca"><img src="/assets/photo.png" alt="Photo de profile"></a>
+    </footer>
+
+
+
     <script src="src/index.js"></script>
   </body>
 </html>

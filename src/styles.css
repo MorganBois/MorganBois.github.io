@@ -6,6 +6,9 @@ body {
   text-align: center;
   height: 100%;
   font-size: 18px;
+  /*modif*/
+    margin: 0px;
+  /**/
 }
 
 .wrappper {
@@ -46,7 +49,7 @@ Button {
   color: white;
   width: 35px;
   height: 35px;
-  margin: 0 10px 10px 0;
+  margin: 5px 5px 5px 5px;
   outline: none;
 }
 Button:hover {
@@ -73,7 +76,7 @@ Button:hover {
   padding: 10px 10px;
   width: 180px;
   height: 50px;
-  margin: 0 10px 10px 0;
+  margin: 5px 5px 5px 5px;
 
   outline: none;
 }
@@ -82,4 +85,62 @@ Button:hover {
   background: white;
   border: solid 1px white;
   color: #c1d72e;
+}
+
+/*=======================*/
+/*        ajouts
+/*=======================*/
+
+.invisible * {
+  display: none;
+}
+
+#menu-triche > div{
+  display: grid;
+  text-align: right;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
+}
+#menu-triche{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 10px;
+  width: 500px;
+}
+#menu-triche > button{
+  align-self: center;
+  margin: 10px;
+  width: 150px;
+}
+#menu-triche > div > textarea {
+  resize: none;
+}
+
+footer {
+  display: grid;
+  grid-template:
+    "1 2 3" auto / 1fr 1fr 1fr;
+    padding: 15px;
+}
+footer > a > img {
+  margin: 10px;
+  min-height: 60px;
+  border-radius: 50%;
+  box-shadow: black 0px 0px 10px 0px;
+}
+footer > a {
+  align-self: center;
+  justify-self: end;
+}
+footer > :first-child {
+  text-align: left;
+}
+
+.btn-1 {
+  cursor: pointer;
+  padding: 5px 5px;
+  margin: 0px;
+  width: 60px;
+  height: auto;
 }
